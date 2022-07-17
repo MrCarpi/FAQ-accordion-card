@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+body{
+    background: linear-gradient(180deg, var(--Soft-violet),var(--Soft-blue));
+    height: 100vh;
+}
+.main-container{
+    width: 330px;
+    min-height: 536px;
+    background: var(--Light-grayish-blue);
+    border-radius: 10px;
+    margin: 140px auto 30px;
+    padding: 25px;
+    box-shadow: 0px 10px 40px var(--Very-dark-desaturated-blue);
+}
+.main-container .seccion1 .imagen{
+    display: block;
+    width: 240px;
+    margin: -129px auto 0;
+}
+.main-container .seccion1 .pattern-mobile{
+    content: url(/images/bg-pattern-mobile.svg);
+    width: 240px;
+    margin: -75px auto 0;
+}
+.main-container .seccion2 h2{
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+}
+.main-container .seccion2 .details{
+    cursor: pointer;
+    margin: 16px 0;
+    position: relative;
+}
+.main-container .seccion2 .details .summary{
+    list-style: none;
+    color: var(--Very-dark-grayish-blue);
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+.main-container .seccion2 .details .summary:hover{
+    color: var(--Soft-red);
+}
+.main-container .seccion2 .details .icon{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    transition: .2s;
+}
+.main-container .seccion2 .details[open] .icon{
+    transform: rotate(180deg);
+    transition: .2s;
+}
+.main-container .seccion2 .details[open] .summary{
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.main-container .seccion2 .details[open] .paragraph{
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+@media (min-width:1044px){
+    .main-container{
+        width: 924px;
+        display: flex;
+        background-image: url(/images/bg-pattern-desktop.svg);
+        background-position-x:-536px;
+        background-position-y:-281px ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .main-container .seccion1,.seccion2{
+        width: 100%;
+    }
+    .main-container .seccion1 .imagen{
+        width: 474px;
+        margin: 67px 0 0 -130px;
+    }
+    .main-container .seccion1 .pattern-mobile{
+        content: '';
+    }
+    .main-container .seccion2{
+        padding: 15px 80px 20px 40px;
+    }
+    .main-container .seccion2 h2{
+        margin-bottom: 32px;
+        text-align: left;
+    }
+    .main-container .seccion2 .details{
+        margin: 26px 0;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(0, 0%, 7%); text-decoration: none; }
+.attribution a:hover{
+    text-decoration: underline;
+}
