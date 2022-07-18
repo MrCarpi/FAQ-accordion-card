@@ -83,7 +83,7 @@ body{
     .main-container{
         width: 924px;
         display: flex;
-        background-image: url(/images/bg-pattern-desktop.svg);
+        background-image: url(/bg-pattern-desktop.png);
         background-position-x:-536px;
         background-position-y:-281px ;
         background-repeat: no-repeat;
@@ -97,7 +97,7 @@ body{
         margin: 67px 0 0 -130px;
     }
     .main-container .seccion1 .pattern-mobile{
-        content: '';
+        content: ' ';
     }
     .main-container .seccion2{
         padding: 15px 80px 20px 40px;
